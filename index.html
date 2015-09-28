@@ -60,6 +60,13 @@
 				</section>
 
 				<section>
+					<h5>Pintxos (Tapas)</h5>
+					<p>
+						<img src="./img/pintxos.jpg" />
+					</p>
+				</section>
+
+				<section>
 					<h5>Fun fact #2</h5>
 					<p>
 						Streets in Bilbao have names both in Spanish and in Basque.<br/><br/>
@@ -166,6 +173,97 @@
 						<p class='fragment' style="color: red; font-size: 72px;">KeyboardInterrupt</p>
 					</section>
 				</section>
+
+				<section>
+          <h5><a href="https://youtu.be/mJyjkAOK0uw">Code is not text!
+            <small>How graph technologies can help us to understand our code better.</small>
+          </a></h5>
+					<p>
+						Pattern based review tool for identifing potential <em>issues and bugs</em>:
+						<ul>
+              <li><a href="http://docs.quantifiedcode.com/python-code-patterns/">Python Anti-Patterns</a></li>
+							<li><a href="https://www.quantifiedcode.com">Quantified Code</a></li>
+							<li>Code pattern language</li>
+							<li>GitHub integration</li>
+							<li>Visualizations</li>
+						</ul>
+					</p>
+					<aside class="notes">
+            Diferent way how to understand code using graph techniques.
+
+            https://ep2015.europython.eu/conference/talks/code-as-data-surprising-insights-we-get-when-stopping
+					</aside>
+				</section>
+
+				<section>
+          <h5><a href="https://youtu.be/mJyjkAOK0uw">Big Data Beautiful Visualization on the Browser with Bokeh</a></h5>
+					<p>
+            Interactive visualization library for <em>large datasets</em>.
+						<ul>
+							<li>D3.js</li>
+							<li>IPython Notebook</li>
+						</ul>
+					</p>
+					<aside class="notes">
+            https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
+					</aside>
+				</section>
+
+				<section>
+          <h5><a href="https://youtu.be/mJyjkAOK0uw">Distributed Workflows with Flowy</a></h5>
+					<p>
+            Library for building and running distributed, asynchronous workflows on different backends (Amazon SWF, Redis, Local).
+          <pre>
+def process_video(embed_subtitle, find_chapters, ...):
+    def workflow(video_URL, subtitle_URL):
+        new_URL = embed_subtitle(video_URL, subtitle_URL)
+        webm_URL = encode_video(new_URL, 'webm')
+        mpeg4_URL = encode_video(new_URL, 'mpeg4')
+        ad_tags = target_ads(subtitle_URL)
+        chapters = find_chapters(video_URL)
+        thumbnails = [extract_thumbnail(video_URL, c)
+                      for c in chapters]
+        return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
+    return workflow
+          </pre>
+					</p>
+					<aside class="notes">
+            https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
+					</aside>
+				</section>
+
+				<section>
+          <h5>Packaging tips and tricks</h5>
+					<p>
+            Interactive visualization library for <em>large datasets</em>.
+						<ul>
+							<li>manifest_scm</li>
+							<li>check-manifest</li>
+              <li>selectors:<pre>
+':python_version=="2.6"': ['argparse'],
+':sys_platform=="win32"': ['colorama'],
+              </pre</li>
+						</ul>
+					</p>
+					<aside class="notes">
+            https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
+					</aside>
+				</section>
+
+
+				<section>
+					<section>
+            <h5><strike>Fun</strike> fact about Python</h5>
+						<p>
+							It is time to write code for Python <strike>2.7</strike> 3.5.
+						</p>
+            <ul>
+              <li>matrix multipliers (@)</li>
+              <li>type hints</li>
+              <li>PEP492 - async</li>
+					</section>
+				</section>
+
 
 			</div>
 
