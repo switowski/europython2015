@@ -213,8 +213,7 @@
           <h5><a href="https://youtu.be/mJyjkAOK0uw">Distributed Workflows with Flowy</a></h5>
 					<p>
             Library for building and running distributed, asynchronous workflows on different backends (Amazon SWF, Redis, Local).
-          <pre>
-def process_video(embed_subtitle, find_chapters, ...):
+          <pre><code class="python">def process_video(embed_subtitle, find_chapters, ...):
     def workflow(video_URL, subtitle_URL):
         new_URL = embed_subtitle(video_URL, subtitle_URL)
         webm_URL = encode_video(new_URL, 'webm')
@@ -224,8 +223,7 @@ def process_video(embed_subtitle, find_chapters, ...):
         thumbnails = [extract_thumbnail(video_URL, c)
                       for c in chapters]
         return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
-    return workflow
-          </pre>
+    return workflow</code></pre>
 					</p>
 					<aside class="notes">
             https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
