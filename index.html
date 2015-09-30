@@ -189,13 +189,13 @@
 
 
 				<section>
-          <h5><a href="https://youtu.be/mJyjkAOK0uw">Code is not text!
-            <small>How graph technologies can help us to understand our code better.</small>
-          </a></h5>
+					<h5><a href="https://youtu.be/mJyjkAOK0uw">Code is not text!
+						<small>How graph technologies can help us to understand our code better.</small>
+					</a></h5>
 					<p>
-						Pattern based review tool for identifing potential <em>issues and bugs</em>:
+						Pattern based review tool for identifing <em>issues and bugs</em>:
 						<ul>
-              <li><a href="http://docs.quantifiedcode.com/python-code-patterns/">Python Anti-Patterns</a></li>
+							<li><a href="http://docs.quantifiedcode.com/python-code-patterns/">Python Anti-Patterns</a></li>
 							<li><a href="https://www.quantifiedcode.com">Quantified Code</a></li>
 							<li>Code pattern language</li>
 							<li>GitHub integration</li>
@@ -203,101 +203,112 @@
 						</ul>
 					</p>
 					<aside class="notes">
-            Diferent way how to understand code using graph techniques.
+						Diferent way how to understand code using graph techniques.
 
-            https://ep2015.europython.eu/conference/talks/code-as-data-surprising-insights-we-get-when-stopping
+						https://ep2015.europython.eu/conference/talks/code-as-data-surprising-insights-we-get-when-stopping
 					</aside>
 				</section>
 
 				<section>
-          <h5><a href="https://youtu.be/mJyjkAOK0uw">Big Data Beautiful Visualization on the Browser with Bokeh</a></h5>
+					<h5><a href="https://youtu.be/mJyjkAOK0uw">Big Data Beautiful Visualization on the Browser with Bokeh</a></h5>
 					<p>
-            Interactive visualization library for <em>large datasets</em>.
+						Interactive visualization library for <em>large datasets</em>.
 						<ul>
 							<li>D3.js</li>
 							<li>IPython Notebook</li>
 						</ul>
 					</p>
 					<aside class="notes">
-            https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
+						https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
 					</aside>
 				</section>
 
 				<section>
-          <h5><a href="https://youtu.be/mJyjkAOK0uw">Distributed Workflows with Flowy</a></h5>
+					<h5><a href="https://youtu.be/mJyjkAOK0uw">Distributed Workflows with Flowy</a></h5>
 					<p>
-            Library for building and running distributed, asynchronous workflows on different backends (Amazon SWF, Redis, Local).
-          <pre><code class="python">def process_video(embed_subtitle, find_chapters, ...):
-    def workflow(video_URL, subtitle_URL):
-        new_URL = embed_subtitle(video_URL, subtitle_URL)
-        webm_URL = encode_video(new_URL, 'webm')
-        mpeg4_URL = encode_video(new_URL, 'mpeg4')
-        ad_tags = target_ads(subtitle_URL)
-        chapters = find_chapters(video_URL)
-        thumbnails = [extract_thumbnail(video_URL, c)
-                      for c in chapters]
-        return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
-    return workflow</code></pre>
+						Library for building and running distributed, asynchronous workflows on different backends (Amazon SWF, Redis, Local).
+					<pre><code class="python">def process_video(embed_subtitle, find_chapters, ...):
+		def workflow(video_URL, subtitle_URL):
+				new_URL = embed_subtitle(video_URL, subtitle_URL)
+				webm_URL = encode_video(new_URL, 'webm')
+				mpeg4_URL = encode_video(new_URL, 'mpeg4')
+				ad_tags = target_ads(subtitle_URL)
+				chapters = find_chapters(video_URL)
+				thumbnails = [extract_thumbnail(video_URL, c)
+											for c in chapters]
+				return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
+		return workflow</code></pre>
 					</p>
 					<aside class="notes">
-            https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
+						https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
 					</aside>
 				</section>
 
 				<section>
-          <h5>Packaging tips and tricks</h5>
+					<h5><a href="https://www.youtube.com/watch?v=o-UbWsO9rZk">Less Known Packaging Features and Tricks</a></h5>
 					<p>
-            Interactive visualization library for <em>large datasets</em>.
+						Save you time and avoid <em>packaging-induced-pain</em>.
 						<ul>
-							<li>manifest_scm</li>
+							<li><a href="http://packaging.python.org">packaging.python.org</a> - <em>distributions</em></li>
+							<li><a href="https://github.com/pypa/setuptools_scm">setuptools_scm</a></li>
 							<li>check-manifest</li>
-              <li>selectors:<pre>
+							<li>selectors:<pre>
 ':python_version=="2.6"': ['argparse'],
 ':sys_platform=="win32"': ['colorama'],
-              </pre</li>
+							</pre</li>
 						</ul>
 					</p>
 					<aside class="notes">
+						How many of you knows what MANIFEST.in is? Have you ever released
+						package without needed file?<br/>
+
+						Check your manifest and include it in your CI tools.<br/>
+
+						Another tips are useful if you are creating package for various
+						python versions or operating systems.<br/>
+
+						Do not parse Python version yourself! Save yourself some troubles
+						and use selectors to specify dependencies.
 					</aside>
 				</section>
 
 				<section>
-          <h5><a href="https://www.youtube.com/watch?v=nrSZthcAN2U">Mashing up py.test, coverage.py and ast.py to Take TDD to a New Level</a></h5>
+					<h5><a href="https://www.youtube.com/watch?v=nrSZthcAN2U">Mashing up py.test, coverage.py and ast.py to Take TDD to a New Level</a></h5>
 					<p>
-            Do you ♥ TTD but you hate waiting?
+						Do you ♥ TTD but you hate waiting?
 						<ul>
 							<li>Safe precious testing time with Testmon</li>
-              <li><a href="https://github.com/tarpas/pytest-testmon/">Integration with PyTest</a></li>
-              <li><a href="https://github.com/tarpas/pytest-testmon/wiki/Determining-affected-tests">Determine afffected tests</a></li>
+							<li><a href="https://github.com/tarpas/pytest-testmon/">Integration with PyTest</a></li>
+							<li><a href="https://github.com/tarpas/pytest-testmon/wiki/Determining-affected-tests">Determine afffected tests</a></li>
 						</ul>
 					</p>
 					<aside class="notes">
-            The usual developer problem when a testuite gets big. Should I run
-            the whole testsuite when I change only a small fraction of code?
-            People tend to re-run only failing tests but can one be sure that
-            passed tests are not failing again?
-            <br/>
-            Testmon monitors code changes and executes only affected tests.
-            <br/>
-            code line -> list of tests
-            <br/>
-            pytest-watch
+						The usual developer problem when a testuite gets big. Should I run
+						the whole testsuite when I change only a small fraction of code?
+						People tend to re-run only failing tests but can one be sure that
+						passed tests are not failing again?
+						<br/>
+						Testmon monitors code changes and executes only affected tests.
+						<br/>
+						code line -> list of tests
+						<br/>
+						pytest-watch
 					</aside>
 				</section>
 
 				<section>
 					<section>
-            <h5><strike>Fun</strike> fact about Python</h5>
+						<h5><strike>Fun</strike> fact about Python</h5>
 						<p>
 							It is time to write code for Python <strike>2.7</strike> 3.5.
 						</p>
-            <ul>
-              <li>matrix multipliers (@)</li>
-              <li>type hints</li>
-              <li>PEP492 - async</li>
+						<ul>
+							<li>matrix multipliers (@)</li>
+							<li>type hints</li>
+							<li>PEP492 - async</li>
+						</ul>
 					</section>
 				</section>
-
 
 			</div>
 
