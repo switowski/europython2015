@@ -227,16 +227,16 @@
 					<p>
 						Library for building and running distributed, asynchronous workflows on different backends (Amazon SWF, Redis, Local).
 					<pre><code class="python">def process_video(embed_subtitle, find_chapters, ...):
-		def workflow(video_URL, subtitle_URL):
-				new_URL = embed_subtitle(video_URL, subtitle_URL)
-				webm_URL = encode_video(new_URL, 'webm')
-				mpeg4_URL = encode_video(new_URL, 'mpeg4')
-				ad_tags = target_ads(subtitle_URL)
-				chapters = find_chapters(video_URL)
-				thumbnails = [extract_thumbnail(video_URL, c)
-											for c in chapters]
-				return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
-		return workflow</code></pre>
+    def workflow(video_URL, subtitle_URL):
+        new_URL = embed_subtitle(video_URL, subtitle_URL)
+        webm_URL = encode_video(new_URL, 'webm')
+        mpeg4_URL = encode_video(new_URL, 'mpeg4')
+        ad_tags = target_ads(subtitle_URL)
+        chapters = find_chapters(video_URL)
+        thumbnails = [extract_thumbnail(video_URL, c)
+                      for c in chapters]
+        return video_URL, webm_URL, mpeg4_URL, thumbnails, ad_tags
+    return workflow</code></pre>
 					</p>
 					<aside class="notes">
 						https://ep2015.europython.eu/conference/talks/big-data-beautiful-visualization-on-the-browser-with-bokeh
